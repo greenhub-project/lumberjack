@@ -1,0 +1,29 @@
+{
+  "name": "greenhub-cli",
+  "version": "1.0.0",
+  "description": "A command line app for interacting with the GreenHub REST API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmatalonga/greenhub-lumberjack.git"
+  },
+  "keywords": [
+    "greenhub"
+  ],
+  "author": "Hugo Matalonga <hmatalonga@gmail.com> (http://hmatalonga.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hmatalonga/greenhub-lumberjack/issues"
+  },
+  "homepage": "https://github.com/hmatalonga/greenhub-lumberjack#readme",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "conf": "^1.1.1",
+    "log-symbols": "^1.0.2"
+  }
+}
