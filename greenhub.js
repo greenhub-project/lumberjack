@@ -20,6 +20,7 @@ const greenhub = {
   login: function(token, options) {
     if (! this.config.has('server')) {
       console.log(logSymbols.warning, 'Server URL is not defined')
+      console.log('Please attempt to login again...')
       this.fetchServerUrl()
       return
     }
@@ -60,16 +61,22 @@ const greenhub = {
     }
   },
 
-  whoami: function() {
+  whoami: function(options) {
     if (! this.config.has('token')) {
       console.log('Not logged in...')
     } else {
-      axios.get(getApiUrl('/user', this.config.get('token')))
-      .then(response => {
-        if (response.data != null) {
-          console.log(JSON.stringify(response.data, null, '    '))
-        }
-      })
+      if (this.config.has('user')) {
+        this.displayUserInfo(this.config.get('user'), options.json)
+      } else {
+        console.log(chalk.blue('Fetching info from the server...'))
+        axios.get(this.getApiUrl('/user', this.config.get('token')))
+        .then(response => {
+          if (response.data != null) {
+            this.config.set('user', response.data)
+            this.displayUserInfo(response.data, options.json)
+          }
+        })
+      }
     }
   },
 
@@ -100,7 +107,7 @@ const greenhub = {
           'You are now logged in as ' + chalk.bold(response.data.name)
         )
         this.config.set('token', token)
-        this.config.set('name', response.data.name)
+        this.config.set('user', response.data)
       }
     })
     .catch(error => {
@@ -108,6 +115,17 @@ const greenhub = {
         logSymbols.error, 'API token not valid'
       )
     })
+  },
+
+  displayUserInfo: function(user, isJson = false) {
+    const status = user.verified ? logSymbols.success : logSymbols.error
+    if (isJson) {
+      console.log(JSON.stringify(user, null, '    '))
+    } else {
+      console.log(chalk.bold(user.name), status)
+      console.log(user.email)
+      console.log('Joined in', chalk.gray(user.created_at))
+    }
   },
 
   getApiUrl: function(method = '', token = '', version = 1) {

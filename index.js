@@ -42,7 +42,8 @@ program
 program
   .command('whoami')
   .description('display information about the logged user')
-  .action(() => greenhub.whoami())
+  .option('-j, --json', 'output result in JSON')
+  .action((options) => greenhub.whoami(options))
 
 
 program.parse(process.argv)
