@@ -9,7 +9,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "ava"
+    "test": "eslint . && ava"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
+    "eslint": "^3.19.0",
     "execa": "^0.6.3"
   }
 }

@@ -4,9 +4,11 @@
 
 > A command line app for interacting with the GreenHub REST API.
 
+You can learn more about the GreenHub platform at [http://hmatalonga.com/greenhub](http://hmatalonga.com/greenhub)
+
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org) version 4+ installed. Then run the following:
+Make sure you have [Node.js](https://nodejs.org) version 6+ installed. Then run the following:
 
 ```
 $ npm install --global greenhub-cli
