@@ -1,4 +1,7 @@
 # GreenHub Lumberjack
+
+[![Build Status](https://travis-ci.org/hmatalonga/greenhub-lumberjack.svg?branch=master)](https://travis-ci.org/hmatalonga/greenhub-lumberjack)
+
 > A command line app for interacting with the GreenHub REST API.
 
 ## Install
@@ -8,7 +11,6 @@ Make sure you have [Node.js](https://nodejs.org) version 4+ installed. Then run 
 ```
 $ npm install --global greenhub-cli
 ```
-
 
 ## Usage
 

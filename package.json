@@ -2,7 +2,6 @@
   "name": "greenhub-cli",
   "version": "1.0.0",
   "description": "A command line app for interacting with the GreenHub REST API.",
-  "main": "index.js",
   "bin": {
     "greenhub": "index.js"
   },
@@ -10,7 +9,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -33,5 +32,9 @@
     "commander": "^2.9.0",
     "conf": "^1.1.1",
     "log-symbols": "^1.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "execa": "^0.6.3"
   }
 }
