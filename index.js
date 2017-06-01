@@ -44,8 +44,6 @@ program
   .command('lumberjack <model> [params...]')
   .alias('j')
   .description('flexible query builder that exports to different formats')
-  .option('-A, --ascii', 'display on the stdin in ascii')
-  .option('-H, --html', 'export to html file')
   .option('-L, --last <val><interval>', 'value of time interval of last <m>onth, <w>eek,<d>ay or <h>our')
   .option('-R, --range [from]..[to]', 'time range of query in `yyyy-mm-dd` date format, optional arguments')
   .action((model, params, options) => console.log(params))

@@ -15,7 +15,7 @@ $ npm install --global greenhub-cli
 ```
 $ greenhub --help
 
-  Usage: index [options] [command]
+  Usage: greenhub [options] [command]
 
 
   Commands:
@@ -34,7 +34,6 @@ $ greenhub --help
 
     -h, --help     output usage information
     -V, --version  output the version number
-
 ```
 
 ## License
