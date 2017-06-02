@@ -44,10 +44,10 @@ program
   });
 
 program
-  .command('login <token>')
+  .command('login')
   .description('login with an user API token key')
   .option('-r --reload', 'reload login credentials')
-  .action((token, options) => greenhub.login(token, options));
+  .action(options => greenhub.login(options));
 
 program
   .command('logout')
@@ -84,7 +84,7 @@ program
 
 program
   .command('token')
-  .description('display user API token key')
+  .description('display the user API token key')
   .option('-n --new-token', 'generate new token')
   .action(options => greenhub.token(options));
 
@@ -92,7 +92,7 @@ program
   .command('whoami')
   .description('display information about the logged user')
   .option('-j, --json', 'output result in JSON')
-  .action((options) => greenhub.whoami(options));
+  .action(options => greenhub.whoami(options));
 
 
 program.parse(process.argv);

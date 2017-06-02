@@ -25,7 +25,7 @@ $ greenhub --help
   Commands:
 
     count|c [options] <model> [params...]       return total number of records from specified model <devices, samples>
-    login [options] <token>                     login with an user API token key
+    login [options]                             login with an user API token key
     logout                                      logout any user API credentials
     lumberjack|j [options] <model> [params...]  flexible query builder
     remote [options]                            display the current GreenHub API server URL
@@ -38,7 +38,6 @@ $ greenhub --help
 
     -h, --help     output usage information
     -V, --version  output the version number
-
 ```
 
 ## License
