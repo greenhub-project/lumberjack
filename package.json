@@ -6,7 +6,7 @@
     "greenhub": "index.js"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "scripts": {
     "test": "eslint . && ava"
@@ -31,7 +31,10 @@
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
     "conf": "^1.1.1",
-    "log-symbols": "^1.0.2"
+    "inquirer": "^3.0.6",
+    "log-symbols": "^1.0.2",
+    "moment": "^2.18.1",
+    "update-notifier": "^2.1.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",

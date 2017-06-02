@@ -8,7 +8,7 @@ You can learn more about the GreenHub platform at [http://hmatalonga.com/greenhu
 
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org) version 6+ installed. Then run the following:
+Make sure you have [Node.js](https://nodejs.org) version 4+ installed. Then run the following:
 
 ```
 $ npm install --global greenhub-cli
@@ -19,17 +19,17 @@ $ npm install --global greenhub-cli
 ```
 $ greenhub --help
 
-  Usage: greenhub [options] [command]
+  Usage: index [options] [command]
 
 
   Commands:
 
-    count|c [options] <model>                   return total number of records from specified model <devices, samples>
+    count|c [options] <model> [params...]       return total number of records from specified model <devices, samples>
     login [options] <token>                     login with an user API token key
     logout                                      logout any user API credentials
-    lumberjack|j [options] <model> [params...]  flexible query builder that exports to different formats
+    lumberjack|j [options] <model> [params...]  flexible query builder
     remote [options]                            display the current GreenHub API server URL
-    token                                       display user API token key
+    token [options]                             display user API token key
     whoami [options]                            display information about the logged user
 
   GreenHub Lumberjack - A command line app for interacting with the GreenHub REST API.
@@ -38,6 +38,7 @@ $ greenhub --help
 
     -h, --help     output usage information
     -V, --version  output the version number
+
 ```
 
 ## License
