@@ -8,11 +8,7 @@ const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
 
 
-// Checks for available update and returns an instance
-const notifier = updateNotifier({pkg});
-
-// Notify using the built-in convenience method
-notifier.notify();
+updateNotifier({pkg}).notify();
 
 /*eslint no-console: ["error", { allow: ["log"] }] */
 
@@ -92,6 +88,12 @@ program
   .description('display the current GreenHub API server URL')
   .option('-f --fetch', 'fetch server url')
   .action(options => greenhub.remote(options));
+
+program
+  .command('status')
+  .description('check the status of the API server')
+  .option('-t, --timeout <seconds>', 'request timeout in seconds, default is 5', 5)
+  .action(options => greenhub.status(options));
 
 program
   .command('token')
