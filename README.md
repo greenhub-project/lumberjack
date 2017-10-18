@@ -1,18 +1,25 @@
 # GreenHub Lumberjack
 
-[![Build Status](https://travis-ci.org/hmatalonga/greenhub-lumberjack.svg?branch=master)](https://travis-ci.org/hmatalonga/greenhub-lumberjack)
+[![Build Status](https://travis-ci.org/greenhub-project/lumberjack.svg?branch=master)](https://travis-ci.org/greenhub-project/lumberjack)
 [![npm version](https://badge.fury.io/js/greenhub-cli.svg)](https://badge.fury.io/js/greenhub-cli)
+[![Dependency Status](https://david-dm.org/greenhub-project/lumberjack.svg)](https://david-dm.org/greenhub-project/lumberjack)
 
 > A command line app for interacting with the GreenHub REST API.
 
-You can learn more about the GreenHub platform at [http://hmatalonga.com/greenhub](http://hmatalonga.com/greenhub)
+You can learn more about the GreenHub platform at [http://greenhub.hmatalonga.com](http://greenhub.hmatalonga.com)
 
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org) version 4+ installed. Then run the following:
+Make sure you have [Node.js](https://nodejs.org) version 6+ installed. Then run the following:
 
 ```
 $ npm install --global greenhub-cli
+```
+
+In case you don't have permissions to install npm packages globally, then add sudo:
+
+```
+$ sudo npm install --global greenhub-cli
 ```
 
 ## API
@@ -43,6 +50,10 @@ $ greenhub --help
     -h, --help     output usage information
     -V, --version  output the version number
 ```
+
+## Disclaimer
+
+This application was only tested on UNIX-like systems. There is no guarantee that fully supports other systems.
 
 ## License
 MIT © Hugo Matalonga

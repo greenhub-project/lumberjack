@@ -6,34 +6,36 @@
     "greenhub": "index.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
+    "dev": "NODE_ENV=development node index.js",
     "test": "eslint . && ava"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hmatalonga/greenhub-lumberjack.git"
+    "url": "git+https://github.com/greenhub-project/lumberjack.git"
   },
   "keywords": [
     "greenhub",
     "cli",
     "api"
   ],
-  "author": "Hugo Matalonga <hmatalonga@gmail.com> (http://hmatalonga.com)",
+  "author": "Hugo Matalonga <hugo@hmatalonga.com> (http://hmatalonga.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hmatalonga/greenhub-lumberjack/issues"
+    "url": "https://github.com/greenhub-project/lumberjack/issues"
   },
-  "homepage": "https://github.com/hmatalonga/greenhub-lumberjack#readme",
+  "homepage": "https://github.com/greenhub-project/lumberjack#readme",
   "dependencies": {
     "axios": "^0.16.1",
-    "chalk": "^1.1.3",
+    "chalk": "^2.2.0",
     "commander": "^2.9.0",
     "conf": "^1.1.1",
     "inquirer": "^3.0.6",
-    "log-symbols": "^1.0.2",
+    "log-symbols": "^2.1.0",
     "moment": "^2.18.1",
+    "opn": "^5.1.0",
     "update-notifier": "^2.1.0"
   },
   "devDependencies": {
