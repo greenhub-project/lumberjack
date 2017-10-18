@@ -1,6 +1,6 @@
 {
   "name": "greenhub-cli",
-  "version": "1.3.0",
+  "version": "1.2.1",
   "description": "A command line app for interacting with the GreenHub REST API.",
   "bin": {
     "greenhub": "index.js"
