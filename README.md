@@ -29,26 +29,30 @@ $ sudo npm install --global greenhub-cli
 ```
 $ greenhub --help
 
-  Usage: greenhub [options] [command]
+  Usage: index [options] [command]
+
+  GreenHub Lumberjack - A command line app for interacting with the GreenHub REST API.
+
+
+  Options:
+
+    -V, --version  output the version number
+    -h, --help     output usage information
 
 
   Commands:
 
-    count|c [options] <model> [params...]       count number of records from specified model <devices, samples>
+    count|c [options] <model> [params...]       return total number of records from specified model
+    docs                                        open online GreenHub documentation
+    export|e [options] <model> [params...]      export a query of specified model to a csv file
+    list [options]                              list available models
     login [options]                             login with an user API token key
     logout                                      logout any user API credentials
     lumberjack|j [options] <model> [params...]  flexible query builder
-    remote [options]                            display the current GreenHub API server URL
-    status [options]                            check the status of the API server
+    remote [options]                            display the current GreenHub server URL
+    status [options]                            check the status of the server
     token [options]                             display the user API token key
-    whoami [options]                            display information about the logged user
-
-  GreenHub Lumberjack - A command line app for interacting with the GreenHub REST API.
-
-  Options:
-
-    -h, --help     output usage information
-    -V, --version  output the version number
+    whoami [options]                            display information about the user
 ```
 
 ## Disclaimer
