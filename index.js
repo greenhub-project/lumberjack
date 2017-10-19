@@ -52,8 +52,13 @@ program
   .option('-L, --last <interval>', 'amount of time interval of last <m>onth, <w>eek,<d>ay or <h>our')
   .option('-o, --output <file>', 'output csv filename, default is output.csv', 'output.csv')
   .option('-R, --range [from]..[to]', 'time range of query in `yyyy-mm-dd` date format, optional arguments')
+  .option('-t, --timeout <seconds>', 'request timeout in seconds, max value is 60 and default is 10', 10)
   .action((model, params, options) => greenhub.export(model, params, options))
   .on('--help', () => {
+    console.log();
+    console.log('  Parameters [params...] have format [name:value].');
+    console.log();
+    console.log('  See API online documentation for more information.');
     console.log();
     console.log('  Examples:');
     console.log();
@@ -96,6 +101,7 @@ program
   .option('-o, --output <file>', 'output results to a JSON file')
   .option('-p, --page <page>', 'page to display, default is 1', 1)
   .option('-R, --range [from]..[to]', 'time range of query in `yyyy-mm-dd` date format, optional arguments')
+  .option('-t, --timeout <seconds>', 'request timeout in seconds, max value is 60 and default is 10', 10)
   .option('-w, --with <list>', 'load specified model relationships, use `all` for everything')
   .action((model, params, options) => greenhub.lumberjack(model, params, options))
   .on('--help', () => {
@@ -114,8 +120,8 @@ program
     console.log('    $ greenhub lumberjack samples os:6.0 -n 5                      # samples with os version 6.0 and show 5 items per page');
     console.log('    $ greenhub lumberjack samples model:nexus -R ..2017-05-31      # samples with model nexus that were uploaded before 2017-05-31');
     console.log('    $ greenhub lumberjack devices brand:google -a -o output.json   # all devices with brand google to a file output.json');
-    console.log('    $ greenhub lumberjack samples -w \'device settings\'           # samples with device and settings model relationships');
-    console.log('    $ greenhub lumberjack samples -w \'processes.permissions\'     # samples with processes->permissions nested model relationship');
+    console.log('    $ greenhub lumberjack samples -w \'device settings\'             # samples with device and settings model relationships');
+    console.log('    $ greenhub lumberjack samples -w \'processes.permissions\'       # samples with processes->permissions nested model relationship');
     console.log();
   });
 
