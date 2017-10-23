@@ -29,9 +29,11 @@ $ sudo npm install --global greenhub-cli
 ```
 $ greenhub --help
 
-  Usage: index [options] [command]
+  Usage: greenhub [options] [command]
 
   GreenHub Lumberjack - A command line app for interacting with the GreenHub REST API.
+
+  To learn more about the GreenHub project visit http://greenhub.hmatalonga.com
 
 
   Options:
