@@ -6,7 +6,7 @@
 
 > A command line app for interacting with the GreenHub REST API.
 
-You can learn more about the GreenHub platform at [http://greenhub.hmatalonga.com](http://greenhub.hmatalonga.com)
+You can learn more about the GreenHub platform at [https://greenhubproject.org](https://greenhubproject.org)
 
 ## Install
 
@@ -33,7 +33,7 @@ $ greenhub --help
 
   GreenHub Lumberjack - A command line app for interacting with the GreenHub REST API.
 
-  To learn more about the GreenHub project visit http://greenhub.hmatalonga.com
+  To learn more about the GreenHub project visit https://greenhubproject.org
 
 
   Options:
